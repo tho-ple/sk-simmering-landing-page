@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Image from "next/image";
 import "./globals.css";
-import { FaChessKnight } from "react-icons/fa";
 import { SiLichess, SiChessdotcom } from "react-icons/si";
 
 const geistSans = Geist({
@@ -49,14 +49,26 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white`}
       >
+        <header className="flex justify p-4">
+          <Image
+            src="/vereinslogo.jpg"
+            alt="1. Simmeringer Schachklub Logo"
+            width={80}
+            height={80}
+            className="rounded-full shadow-md"
+          />
+        </header>
         {children}
-        <footer className="flex justify-center items-center mt-10 py-4 border-t border-gray-300 dark:border-gray-700">
-          <a href="https://www.chess.com/club/1-simmeringer-schachklub/join" target="_blank" rel="noopener noreferrer" className="mx-4 text-gray-700 dark:text-gray-300 hover:text-green-600">
-            <SiChessdotcom size={28} />
-          </a>
-          <a href="https://lichess.org/team/1-simmeringer-schachklub" target="_blank" rel="noopener noreferrer" className="mx-4 text-gray-700 dark:text-gray-300 hover:text-blue-600">
-            <SiLichess size={28} />
-          </a>
+        <footer className="flex flex-col justify-center items-center mt-10 py-6 border-t border-gray-300 dark:border-gray-700 text-center bg-gray-200 dark:bg-gray-800 shadow-md">
+          <p className="mb-2 text-sm text-gray-600 dark:text-gray-400">Trete unseren Online-Schachclubs bei:</p>
+          <div className="flex space-x-6">
+            <a href="https://www.chess.com/club/1-simmeringer-schachklub/join" target="_blank" rel="noopener noreferrer" className="flex items-center text-gray-700 dark:text-gray-300 hover:text-green-600 transition-transform transform hover:scale-110">
+              <SiChessdotcom size={28} className="mr-2" /> Chess.com Club
+            </a>
+            <a href="https://lichess.org/team/1-simmeringer-schachklub" target="_blank" rel="noopener noreferrer" className="flex items-center text-gray-700 dark:text-gray-300 hover:text-blue-600 transition-transform transform hover:scale-110">
+              <SiLichess size={28} className="mr-2" /> Lichess Team
+            </a>
+          </div>
         </footer>
       </body>
     </html>
