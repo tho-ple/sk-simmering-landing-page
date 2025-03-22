@@ -18,11 +18,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "1. Simmeringer Schachklub - Wien",
     description: "Spiele Schach in Wien 1110, Simmering. Jeden Dienstag ab 15:30 im Cafe Michelle.",
-    url: "http://localhost:3000",
+    url: "https://schachklub-simmering.vercel.app",
     type: "website",
     images: [
       {
-        url: "http://localhost:3000/vereinslogo.jpg",
+        url: "https://schachklub-simmering.vercel.app/vereinslogo.jpg",
         width: 1200,
         height: 630,
         alt: "1. Simmeringer Schachklub Logo",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "1. Simmeringer Schachklub - Wien",
     description: "Spiele Schach in Wien 1110, Simmering. Jeden Dienstag ab 15:30 im Cafe Michelle.",
-    images: ["http://localhost:3000/vereinslogo.jpg"],
+    images: ["https://schachklub-simmering.vercel.app/vereinslogo.jpg"],
   },
 };
 
