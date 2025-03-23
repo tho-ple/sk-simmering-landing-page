@@ -4,6 +4,9 @@ import Image from "next/image";
 import "./globals.css";
 import { SiLichess, SiChessdotcom } from "react-icons/si";
 
+// Load base URL from environment variables
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://schachklub-simmering.vercel.app";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -20,11 +23,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "1. Simmeringer Schachklub - Wien",
     description: "Spiele Schach in Wien 1110, Simmering. Jeden Dienstag ab 15:30 im Cafe Michelle.",
-    url: "https://schachklub-simmering.vercel.app",
+    url: baseUrl,
     type: "website",
     images: [
       {
-        url: "https://schachklub-simmering.vercel.app/vereinslogo.jpg",
+        url: `${baseUrl}/vereinslogo.jpg`,
         width: 1200,
         height: 630,
         alt: "1. Simmeringer Schachklub Logo",
@@ -35,7 +38,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "1. Simmeringer Schachklub - Wien",
     description: "Spiele Schach in Wien 1110, Simmering. Jeden Dienstag ab 15:30 im Cafe Michelle.",
-    images: ["https://schachklub-simmering.vercel.app/vereinslogo.jpg"],
+    images: [`${baseUrl}/vereinslogo.jpg`],
   },
 };
 
