@@ -11,7 +11,6 @@ export default function Home() {
       </Head>
 
       <main className="flex flex-col items-center justify-center px-6 py-12">
-        <h1 className="text-4xl font-bold text-center">1. Simmeringer Schachklub</h1>
         <p className="mt-4 text-lg text-center">Schach in Simmering - Komm vorbei und spiel mit!</p>
         <p className="mt-2 text-center">📍 <strong>Ort:</strong> Cafe Michelle, Grillgasse 14A, 1110 Wien</p>
         <p className="mt-2 text-center">📅 <strong>Vereinsabend:</strong> Dienstag ab 15:30</p>

@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Image from "next/image";
+import Link from "next/link";
 import "./globals.css";
 import { SiLichess, SiChessdotcom } from "react-icons/si";
 
-// Load base URL from environment variables
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://schachklub-simmering.vercel.app";
 
 const geistSans = Geist({
@@ -49,30 +49,28 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="de">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white`}
-      >
-        <header className="flex justify p-4">
-          <Image
-            src="/vereinslogo.jpg"
-            alt="1. Simmeringer Schachklub Logo"
-            width={80}
-            height={80}
-            className="rounded-full shadow-md"
-          />
-        </header>
-        {children}
-        <footer className="flex flex-col justify-center items-center mt-10 py-6 border-t border-gray-300 dark:border-gray-700 text-center bg-gray-200 dark:bg-gray-800 shadow-md">
-          <p className="mb-2 text-sm text-gray-600 dark:text-gray-400">Trete unseren Online-Schachclubs bei:</p>
-          <div className="flex space-x-6">
-            <a href="https://www.chess.com/club/1-simmeringer-schachklub/join" target="_blank" rel="noopener noreferrer" className="flex items-center text-gray-700 dark:text-gray-300 hover:text-green-600 transition-transform transform hover:scale-110">
-              <SiChessdotcom size={28} className="mr-2" /> Chess.com Club
-            </a>
-            <a href="https://lichess.org/team/1-simmeringer-schachklub" target="_blank" rel="noopener noreferrer" className="flex items-center text-gray-700 dark:text-gray-300 hover:text-blue-600 transition-transform transform hover:scale-110">
-              <SiLichess size={28} className="mr-2" /> Lichess Team
-            </a>
-          </div>
-        </footer>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white`}>
+        <div className="flex flex-col min-h-screen">
+          <header className="flex justify-between items-center p-4 bg-gray-200 dark:bg-gray-800 shadow-md">
+            <div className="flex items-center space-x-4">
+              <Image src="/vereinslogo.jpg" alt="1. Simmeringer Schachklub Logo" width={60} height={60} className="rounded-full" />
+              <span className="text-xl font-semibold text-gray-900 dark:text-white">1. Simmeringer Schachklub</span>
+            </div>
+            <nav>
+              <ul className="flex space-x-6">
+                <li><Link href="/" className="hover:text-blue-600">Home</Link></li>
+                <li><Link href="/club-info" className="hover:text-blue-600">Verein</Link></li>
+                <li><Link href="/events" className="hover:text-blue-600">Events</Link></li>
+                <li><Link href="/online-clubs" className="hover:text-blue-600">Online-Schachclubs</Link></li>
+                <li><Link href="/contact" className="hover:text-blue-600">Kontakt</Link></li>
+              </ul>
+            </nav>
+          </header>
+          <main className="flex-grow p-6 max-w-4xl mx-auto">{children}</main>
+          <footer className="flex flex-col justify-center items-center mt-10 py-6 border-t border-gray-300 dark:border-gray-700 text-center bg-gray-200 dark:bg-gray-800 shadow-md">
+            <p className="text-sm text-gray-600 dark:text-gray-400">© {new Date().getFullYear()} 1. Simmeringer Schachklub</p>
+          </footer>
+        </div>
       </body>
     </html>
   );
