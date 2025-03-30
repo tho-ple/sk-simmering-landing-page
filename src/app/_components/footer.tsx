@@ -35,8 +35,6 @@ export function Footer() {
           {/* Right Section: Links */}
           <div className="mt-6 md:mt-0">
             <ul className="flex flex-wrap justify-center md:justify-end space-x-4 text-sm text-gray-600 dark:text-gray-400">
-              <li><a href="/about" className="hover:underline hover:text-gray-700 dark:hover:text-gray-300">Über uns</a></li>
-              <li><a href="/contact" className="hover:underline hover:text-gray-700 dark:hover:text-gray-300">Kontakt</a></li>
               <li><a href="/privacy" className="hover:underline hover:text-gray-700 dark:hover:text-gray-300">Datenschutz</a></li>
               <li><a href="/terms" className="hover:underline hover:text-gray-700 dark:hover:text-gray-300">AGB</a></li>
               <li><a href="/impressum" className="hover:underline hover:text-gray-700 dark:hover:text-gray-300 font-semibold">Impressum</a></li>
