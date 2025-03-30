@@ -1,13 +1,13 @@
 ---
 title: "Unser zweiter Blogeintrag"
 excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus."
-coverImage: "/chess_bg_black.png"
+coverImage: "/chess_filler_2.jpg"
 date: "2025-03-30T05:35:07.322Z"
 author:
   name: Thomas Pleiner
   picture: "/assets/blog/authors/thomas.jpg"
 ogImage:
-  url: "/chess_bg_black.png"
+  url: "/chess_filler_2.jpg"
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus. Praesent elementum facilisis leo vel fringilla. Congue mauris rhoncus aenean vel. Egestas sed tempus urna et pharetra pharetra massa massa ultricies.
