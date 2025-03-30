@@ -12,6 +12,7 @@ export default function Index() {
       <Container>
         <Intro/>
         <Vereinsabend />
+        <MoreStories posts={allPosts}/>
       </Container>
     </main>
   );
