@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 const baseUrl = "https://schachklub-simmering.vercel.app";
 
 export const metadata: Metadata = {
-  
+  verification: { google: "VEvzVKTitK_WmreqXG0kIlRSKzm0RIerTJ0BJ_f129c" },
   title: "1. Simmeringer Schachklub - Wien",
   description: "Der 1. Simmeringer Schachklub lädt ein! Spiele Schach in Wien 1110, Simmering. Jeden Dienstag ab 15:30 im Cafe Michelle.",
   openGraph: {
