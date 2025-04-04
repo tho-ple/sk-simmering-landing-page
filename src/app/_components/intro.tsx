@@ -1,14 +1,17 @@
-import ChessClubLogo from "@/app/_components/chess-logo"
+import ChessClubImageLogo from "@/app/_components/chess-club-logo-image"
 
 export function Intro() {
   return (
-    <section className="flex-col md:flex-row flex items-center md:justify-between mt-16 mb-16 md:mb-12">
-       <div className="hidden md:block"> {/* Logo nur auf mittelgroßen und größeren Bildschirmen anzeigen */}
-        <ChessClubLogo />
+    <section className="flex flex-col md:flex-row items-start md:items-center justify-between mt-8 mb-12">
+      <div className="flex items-center space-x-6"> {/* was space-x-4 */}
+        <div className="hidden md:block">
+          <ChessClubImageLogo />
+        </div>
+        <h1 className="text-4xl md:text-5xl font-bold tracking-tight leading-tight animate-fade-in">
+          1. Simmeringer Schachklub
+        </h1>
       </div>
-      <h1 className="text-5xl md:text-3xl font-bold tracking-tighter leading-tight md:pr-8">
-      1. Simmeringer Schachklub
-      </h1>
+
     </section>
   );
 }
