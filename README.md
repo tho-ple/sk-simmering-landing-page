@@ -1,74 +1,59 @@
-# A statically generated blog example using Next.js, Markdown, and TypeScript
+Schachklub Simmering – Website
 
-This is the existing [blog-starter](https://github.com/vercel/next.js/tree/canary/examples/blog-starter) plus TypeScript.
+This is the official landing page for Schachklub Simmering, a local chess club based in Vienna.
+The site is deployed at 👉 schachklub-simmering.vercel.app
+.
 
-This example showcases Next.js's [Static Generation](https://nextjs.org/docs/app/building-your-application/routing/layouts-and-templates) feature using Markdown files as the data source.
+🚀 Project Overview
 
-The blog posts are stored in `/_posts` as Markdown files with front matter support. Adding a new Markdown file in there will create a new blog post.
+The website was built as a modern, fast, and mobile-friendly landing page for our chess club.
+It provides information about the club, events, and general updates while giving new members a simple way to get to know us.
 
-To create the blog posts we use [`remark`](https://github.com/remarkjs/remark) and [`remark-html`](https://github.com/remarkjs/remark-html) to convert the Markdown files into an HTML string, and then send it down as a prop to the page. The metadata of every post is handled by [`gray-matter`](https://github.com/jonschlinkert/gray-matter) and also sent in props to the page.
+The project is based on Next.js Blog Starter
+, which was customized with TypeScript, React, and AI-assisted coding to meet our needs.
 
-## Demo
+🛠️ Tech Stack
 
-[https://next-blog-starter.vercel.app/](https://next-blog-starter.vercel.app/)
+Framework: Next.js
 
-## Deploy your own
+Language: TypeScript
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/blog-starter)
+Styling: CSS Modules / Tailwind (depending on your setup)
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/next.js/tree/canary/examples/blog-starter&project-name=blog-starter&repository-name=blog-starter)
+Deployment: Vercel
 
-### Related examples
+Content: Markdown & React Components
 
-- [AgilityCMS](/examples/cms-agilitycms)
-- [Builder.io](/examples/cms-builder-io)
-- [ButterCMS](/examples/cms-buttercms)
-- [Contentful](/examples/cms-contentful)
-- [Cosmic](/examples/cms-cosmic)
-- [DatoCMS](/examples/cms-datocms)
-- [DotCMS](/examples/cms-dotcms)
-- [Drupal](/examples/cms-drupal)
-- [Enterspeed](/examples/cms-enterspeed)
-- [Ghost](/examples/cms-ghost)
-- [GraphCMS](/examples/cms-graphcms)
-- [Kontent.ai](/examples/cms-kontent-ai)
-- [MakeSwift](/examples/cms-makeswift)
-- [Payload](/examples/cms-payload)
-- [Plasmic](/examples/cms-plasmic)
-- [Prepr](/examples/cms-prepr)
-- [Prismic](/examples/cms-prismic)
-- [Sanity](/examples/cms-sanity)
-- [Sitecore XM Cloud](/examples/cms-sitecore-xmcloud)
-- [Sitefinity](/examples/cms-sitefinity)
-- [Storyblok](/examples/cms-storyblok)
-- [TakeShape](/examples/cms-takeshape)
-- [Tina](/examples/cms-tina)
-- [Umbraco](/examples/cms-umbraco)
-- [Umbraco heartcore](/examples/cms-umbraco-heartcore)
-- [Webiny](/examples/cms-webiny)
-- [WordPress](/examples/cms-wordpress)
-- [Blog Starter](/examples/blog-starter)
+⚡ Getting Started (Development)
 
-## How to use
+If you want to run the project locally:
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
+# Clone the repository
+git clone https://github.com/<your-username>/<your-repo>.git
+cd <your-repo>
 
-```bash
-npx create-next-app --example blog-starter blog-starter-app
-```
+# Install dependencies
+npm install
 
-```bash
-yarn create next-app --example blog-starter blog-starter-app
-```
+# Start development server
+npm run dev
 
-```bash
-pnpm create next-app --example blog-starter blog-starter-app
-```
 
-Your blog should be up and running on [http://localhost:3000](http://localhost:3000)! If it doesn't work, post on [GitHub discussions](https://github.com/vercel/next.js/discussions).
+The site should now be running at http://localhost:3000
+.
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+📦 Deployment
 
-# Notes
+The website is deployed using Vercel.
+Every push to the main branch automatically triggers a new build and deployment.
 
-`blog-starter` uses [Tailwind CSS](https://tailwindcss.com) [(v3.0)](https://tailwindcss.com/blog/tailwindcss-v3).
+📸 Demo
+
+Check out the live version here:
+👉 schachklub-simmering.vercel.app
+
+👨‍💻 Credits
+
+Base project: Next.js Blog Starter
+
+Customization: Built with ❤️ by a member of Schachklub Simmering using TypeScript, React, and AI-assisted coding.
