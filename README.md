@@ -23,18 +23,3 @@ The project is based on [Next.js Blog Starter](https://next-blog-starter.vercel.
 - **Content:** Markdown & React Components  
 
 ---
-
-## ⚡ Getting Started (Development)
-
-If you want to run the project locally:
-
-```bash
-# Clone the repository
-git clone https://github.com/<your-username>/<your-repo>.git
-cd <your-repo>
-
-# Install dependencies
-npm install
-
-# Start development server
-npm run dev
