@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: `${baseUrl}/vereinslogo.jpg`,
+        url: `${baseUrl}/vereinslogo_pferd.jpg`,
         width: 1200,
         height: 630,
         alt: "1. Simmeringer Schachklub Logo",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "1. Simmeringer Schachklub - Wien",
     description: "Spiele Schach in Wien 1110, Simmering. Jeden Dienstag ab 15:30 im Cafe Michelle.",
-    images: [`${baseUrl}/vereinslogo.jpg`],
+    images: [`${baseUrl}/vereinslogo_pferd.jpg`],
   },
 };
 
