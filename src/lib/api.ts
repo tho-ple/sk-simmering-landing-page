@@ -26,3 +26,20 @@ export function getAllPosts(): Post[] {
     .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
   return posts;
 }
+
+export function getRecentPosts(): Post[] {
+  const slugs = getPostSlugs();
+  const posts = slugs
+    .map((slug) => getPostBySlug(slug))
+    .filter((post) => !IsOlderThanOneMonth(post.date))
+    .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
+  return posts;
+}
+
+function IsOlderThanOneMonth(date: string): boolean {
+  const inputDate = new Date(date);
+  const oneMonthAgo = new Date();
+  oneMonthAgo.setMonth(oneMonthAgo.getMonth() - 1);
+  
+  return inputDate < oneMonthAgo;
+}

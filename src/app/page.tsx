@@ -3,10 +3,10 @@ import { Intro } from "@/app/_components/intro";
 import { Vereinsabend } from "@/app/_components/vereinsabend";
 import { Kontakt } from "@/app/_components/contact";
 import { MoreStories } from "@/app/_components/more-stories";
-import { getAllPosts } from "@/lib/api";
+import { getRecentPosts } from "@/lib/api";
 
 export default function Index() {
-  const allPosts = getAllPosts();
+  const recentPosts = getRecentPosts();
 
   return (
     <main>
@@ -16,7 +16,7 @@ export default function Index() {
           <Vereinsabend />
           <Kontakt />
         </div>
-        <MoreStories posts={allPosts}/>
+        {recentPosts.length > 0 && <MoreStories posts={recentPosts}/>}
       </Container>
     </main>
   );
