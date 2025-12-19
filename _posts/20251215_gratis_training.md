@@ -8,3 +8,4 @@ author:
 ogImage:
   url: "/assets/blog/flyer/20251002_training_flyer.jpeg"
 ---
+Dieser Flyer wurde aktualisiert, da sich unser Vereinslokal geändert hat
