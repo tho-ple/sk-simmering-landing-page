@@ -92,7 +92,7 @@ export function GalleryCarousel({ images }: Props) {
         <div className="absolute bottom-3 right-4">
           <Link
             href="/gallery"
-            className="text-white/90 hover:text-white text-sm font-medium underline-offset-2 hover:underline transition-colors duration-150"
+            className="inline-block bg-black/70 hover:bg-black/90 text-white text-sm font-medium px-3 py-1.5 rounded-full transition-colors duration-150"
           >
             Alle Fotos ansehen →
           </Link>
