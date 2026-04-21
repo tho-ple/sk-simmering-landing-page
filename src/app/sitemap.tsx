@@ -4,6 +4,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://schachklub-simmering.vercel.app";
 
   return [
-    { url: `${baseUrl}/`, lastModified: new Date().toISOString() }, // Home
+    { url: `${baseUrl}/`, lastModified: new Date().toISOString() },
+    { url: `${baseUrl}/gallery`, lastModified: new Date().toISOString() },
   ];
 }

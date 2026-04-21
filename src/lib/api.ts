@@ -1,7 +1,8 @@
 import { Post } from "@/interfaces/post";
+import { GalleryImage } from "@/interfaces/gallery-image";
 import fs from "fs";
 import matter from "gray-matter";
-import { join } from "path";
+import { join, extname, parse } from "path";
 
 const postsDirectory = join(process.cwd(), "_posts");
 
@@ -40,6 +41,32 @@ function IsOlderThanOneMonth(date: string): boolean {
   const inputDate = new Date(date);
   const oneMonthAgo = new Date();
   oneMonthAgo.setMonth(oneMonthAgo.getMonth() - 1);
-  
+
   return inputDate < oneMonthAgo;
+}
+
+const galleryDirectory = join(process.cwd(), "public/assets/gallery");
+const SUPPORTED_EXTENSIONS = new Set([".jpg", ".jpeg", ".png", ".webp", ".gif"]);
+
+function filenameToAlt(filename: string): string {
+  return parse(filename).name.replace(/[-_]+/g, " ").trim();
+}
+
+export function getAllGalleryImages(): GalleryImage[] {
+  if (!fs.existsSync(galleryDirectory)) return [];
+  return fs
+    .readdirSync(galleryDirectory)
+    .filter((f) => SUPPORTED_EXTENSIONS.has(extname(f).toLowerCase()))
+    .map((filename) => ({
+      filename,
+      src: `/assets/gallery/${filename}`,
+      alt: filenameToAlt(filename),
+      mtime: fs.statSync(join(galleryDirectory, filename)).mtimeMs,
+    }))
+    .sort((a, b) => b.mtime - a.mtime)
+    .map(({ filename, src, alt }) => ({ filename, src, alt }));
+}
+
+export function getCarouselGalleryImages(count = 5): GalleryImage[] {
+  return getAllGalleryImages().slice(0, count);
 }
